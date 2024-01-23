@@ -6,7 +6,7 @@
     <link rel="icon" href="./assets/giant.png" type="image/x-icon">
     <style>
         @font-face { font-family: Business; src: url('./assets/font/FFF Business Bold.ttf'); }
-        @font-face { font-family: STIX; src: url('./assets/font/STIXGeneral-Bold.otf'); }
+        @font-face { font-family: STIX; src: url('./assets/font/STIXGeneral-Regular.otf'); }
         
         body {
             margin: 0;
@@ -21,7 +21,12 @@
             display: flex;
             font-family: STIX; /* Choose an appropriate font */
             color: #fff;
+            overflow-y: auto;
         }
+
+        a:visited { text-decoration: none; color:inherit; }
+        a { text-decoration: none;}
+        a:hover, a:active { text-decoration: none;}
 
         /* Additional styles for content on top of the background, if needed */
         .content {
@@ -39,6 +44,37 @@
 
             .desktop-content {
                 display: none; /* Hide content for desktop on mobile */
+            }
+        
+            .text-wrapper {
+                position: center;
+                margin: auto;
+                /*max-height: 90vh; /* 70% of the screen's height */
+                max-width: 90vw;  /* 60% of the screen's width */
+                /*max-height: 40vh;  /* 60% of the screen's width */
+                border: 3px solid #a19d99;
+                background-color: #1b181699;
+                border-radius: 15px;
+                padding: 1vw;
+                /*box-sizing: border-box;*/
+                font-size: 2vh; 
+                text-align: center;
+                margin-top: 3vh;
+            }
+
+
+            .text-wrapper2 {
+                color: #fff;
+                cursor: pointer;
+                transition: color 0.3s, background-color 0.3s;
+                line-height: 120%;
+                text-justify: center;
+            }
+
+            .text-wrapper2:hover {
+                color: #000;
+                background-color: #fff;
+                border-radius: 10px;
             }
 
 
@@ -149,18 +185,59 @@
                 max-width: 80vh;  /* 60% of the screen's width */
                 width: auto;
                 height: auto;
-                padding: 6%;
+                padding: 3vw;
                 border: 3px solid #a19d99; /* Gray border */
                 margin-left: 5vw; /* 10px from the left edge */
-                margin-top: 1vh;
-                display: flex;
+                margin-top: 15vh;
+                display: block;
                 
                 justify-content: center;
-                width: 100%;
+                text-align: center;
+                border-radius: 15px;
+
+                background-color: #1b181699; /* Set the background color */
+                font-size: 3vw;
+            }
+
+            .text-wrapper2 {
+                color: #fff;
+                cursor: pointer;
+                transition: color 0.3s, background-color 0.3s;
+                line-height: 120%;
+                text-justify: center;
+            }
+
+            .text-wrapper2:hover {
+                color: #000;
+                background-color: #fff;
+                border-radius: 10px;
+            }
+
+            .image-wrapper br {
+                display: block; 
+                margin-bottom: 4vh; 
+            }
+
+
+            .text-wrapper {
+                position: absolute;
+                max-height: 60vh; /* 70% of the screen's height */
+                max-width: 70vh;  /* 60% of the screen's width */
+                position: absolute;
+                width: auto;
+                height: auto;
+                padding: 3%;
+                border: 3px solid #a19d99; /* Gray border */
+                right: 5vw; /* 10px from the left edge */
+                top: 20vh;
+                
+                justify-content: right;
+                text-justify: right;
                 border-radius: 15px;
 
                 overflow: hidden; /* Hide any overflow from child elements */
                 background-color: #1b181699; /* Set the background color */
+                font-size: 2.7vh;
             }
 
 
@@ -169,26 +246,20 @@
                 top: 3vh;
                 right: 2vw;
                 /*max-height: 90vh; /* 70% of the screen's height */
-                max-width: 40vw;  /* 60% of the screen's width */
+                max-width: 70vw;  /* 60% of the screen's width */
                 /*max-height: 70vh;  /* 60% of the screen's width */
                 border: 3px solid #a19d99;
                 background-color: #1b181699;
                 border-radius: 15px;
                 padding: 3vh;
                 /*box-sizing: border-box;*/
-                font-size: 3.5em; 
                 text-align: right;
-            }
-
-            .highlight-box br{
-                display: block; 
-                margin-bottom: -2vh; 
             }
 
             .highlight-text {
                 /*font-family: 'Courier New', Courier, monospace; */
                 font-family: Business;
-                font-size: 2.5vw;
+                font-size: 1vw;
                 /*line-height: 1em; */
                 margin: 0; 
                 cursor: pointer;
@@ -286,10 +357,43 @@
             <a href="./index.html"> <img src="./assets/top_logo.png" alt="logo_with_text" style="width:70vw; margin-left: 1vw; margin-top: 1vh;"> </a>
         </div>
 
-        <div style="display: flex; justify-content: center; width: 100vw; margin-top: 3vh;">
-            <img src="./assets/rotatinggiant.gif" style="height: 40vw; text-align: center;" alt="spinning_logo">
+        <div style="display: flex; justify-content: center; width: 100vw;">
+            <!-- empty div for centering lol -->
         </div>
 
+
+        <div class="text-wrapper">
+            <!-- content below! -->
+            <p>
+                <u>Our pricing system is simple:</u> <br> &nbsp; <br>
+                $140 per month, unlimited classes <br>
+                first week free – no registration or cancellation fees <br>
+                month-by-month basis, no long-term contracts <br>
+                1 week cancellation notice <br>
+                Brown and black belts train 50% off
+            </p> 
+        </div>
+
+
+        <div class="text-wrapper">
+            <div class="text-wrapper2">
+                <a href="./documents/rules.pdf" style="color: blue; font-size: 1.5em; line-height: 3em;"><b>&nbsp; <u>Student Rules Document</u> &nbsp;</b></a> <br> 
+            </div>
+
+            <div class="text-wrapper2">
+                <a href="./documents/first_class.pdf" style="color: blue; font-size: 1.5em; line-height: 3em;"><b><u>First Class Document</u></b></a>
+            </div>
+        </div>
+
+
+        <div style="display: flex; justify-content: center; width: 100vw; margin-top: 5vh;">
+            <!-- mobile image -e->
+            <img src="./assets/rotatinggiant.gif" style="height: 40vw; text-align: center;" alt="image"> -->
+        </div>
+
+
+
+        <!--
         <div class="highlight-box">
             <a href="./about_us.html"><p class="highlight-text word1"><b>About Us</b></p></a> <br>
             <a href="./location.html"></a><p class="highlight-text word2"><b>Location</b></p></a> <br>
@@ -298,6 +402,7 @@
             <a href="./gallery.html"></a><p class="highlight-text word5"><b>Gallery</b></p></a> <br>
             <a href="./contact.html"></a><p class="highlight-text word6"><b>Contact</b></p></a>
         </div>
+    -->
 
     </div>
 
@@ -316,21 +421,40 @@
         </div>
 
         <div class="image-wrapper">
-            <img src="./assets/rotatinggiant.gif" style="align-self: flex-start; width:35vw;" alt="spinning_logo">
+            <div class="text-wrapper2">
+                <a href="./documents/rules.pdf"><b>&nbsp; Student Rules Document &nbsp;</b></a> <br>
+            </div>
+
+            <div class="text-wrapper2">
+                <a href="./documents/first_class.pdf"><b>First Class Document</b></a>
+            </div>
         </div>
 
-        <div class="highlight-box">
-            <a href="./about_us.html"><p class="highlight-text word1"><b>About Us</b></p></a> <br>
-            <a href="./location.html"></a><p class="highlight-text word2"><b>Location</b></p></a> <br>
-            <a href="./membership.html"></a><p class="highlight-text word3"><b>Membership</b></p></a> <br> 
-            <a href="./schedule.html"></a><p class="highlight-text word4"><b>Schedule</b></p></a> <br>
-            <a href="./gallery.html"></a><p class="highlight-text word5"><b>Gallery</b></p></a> <br>
+        <div class="highlight-box"> 
+            <a href="./about_us.html"><p class="highlight-text word1"><b>About Us</b></p></a> &nbsp;&nbsp;
+            <a href="./location.html"></a><p class="highlight-text word2"><b>Location</b></p></a> &nbsp;&nbsp;
+            <a href="./membership.html"></a><p class="highlight-text word3"><b>Membership</b></p></a> &nbsp;&nbsp;
+            <a href="./schedule.html"></a><p class="highlight-text word4"><b>Schedule</b></p></a> &nbsp;&nbsp;
+            <a href="./gallery.html"></a><p class="highlight-text word5"><b>Gallery</b></p></a> &nbsp;&nbsp;
             <a href="./contact.html"></a><p class="highlight-text word6"><b>Contact</b></p></a>
         </div>
 
 
+        <div class="text-wrapper">
+            <p>
+                Our pricing system is simple:
+                <ul>
+                    <li>$140 per month, unlimited classes</li>
+                    <li>first week free – no registration or cancellation fees</li>
+                    <li>month-by-month basis, no long-term contracts</li>
+                    <li>1 week cancellation notice</li>
+                    <li>Brown and black belts train 50% off</li>
+                </ul>
+            </p>
+        </div>
+
+
         <div class="bottom-right-text">
-            <a style="vertical-align: middle;">March 1st Opening Day - sign up in the month of March to get a free t-shirt! &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </a>
             <a href="https://www.facebook.com/profile.php?id=100095534624358"><img src="./assets/icons/facebook.webp" alt="facebook" style="height:6vh; vertical-align: middle;"></a> &nbsp;&nbsp;&nbsp;
             <a href="https://www.instagram.com/giantsjiujitsu/"><img src="./assets/icons/instagram.webp" alt="instagram" style="height:6vh; vertical-align: middle;"></a> &nbsp;&nbsp;
             <a href="https://www.youtube.com/@GiantsJiuJitsu"><img src="./assets/icons/youtube.webp" alt="youtube" style="height:8vh; vertical-align: middle;"></a> 

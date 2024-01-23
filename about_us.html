@@ -6,7 +6,7 @@
     <link rel="icon" href="./assets/giant.png" type="image/x-icon">
     <style>
         @font-face { font-family: Business; src: url('./assets/font/FFF Business Bold.ttf'); }
-        @font-face { font-family: STIX; src: url('./assets/font/STIXGeneral-Bold.otf'); }
+        @font-face { font-family: STIX; src: url('./assets/font/STIXGeneral-Regular.otf'); }
         
         body {
             margin: 0;
@@ -21,6 +21,7 @@
             display: flex;
             font-family: STIX; /* Choose an appropriate font */
             color: #fff;
+            overflow-y: auto;
         }
 
         /* Additional styles for content on top of the background, if needed */
@@ -39,6 +40,23 @@
 
             .desktop-content {
                 display: none; /* Hide content for desktop on mobile */
+            }
+
+        
+            .text-wrapper {
+                position: center;
+                margin: auto;
+                /*max-height: 90vh; /* 70% of the screen's height */
+                max-width: 90vw;  /* 60% of the screen's width */
+                /*max-height: 40vh;  /* 60% of the screen's width */
+                border: 3px solid #a19d99;
+                background-color: #1b181699;
+                border-radius: 15px;
+                padding: 1vw;
+                /*box-sizing: border-box;*/
+                font-size: 1.7vh; 
+                text-align: center;
+                margin-top: 3vh;
             }
 
 
@@ -149,18 +167,39 @@
                 max-width: 80vh;  /* 60% of the screen's width */
                 width: auto;
                 height: auto;
-                padding: 6%;
+                padding: 1vw;
                 border: 3px solid #a19d99; /* Gray border */
                 margin-left: 5vw; /* 10px from the left edge */
-                margin-top: 1vh;
+                margin-top: 5vh;
                 display: flex;
                 
                 justify-content: center;
-                width: 100%;
                 border-radius: 15px;
 
                 overflow: hidden; /* Hide any overflow from child elements */
                 background-color: #1b181699; /* Set the background color */
+            }
+
+
+            .text-wrapper {
+                position: absolute;
+                max-height: 60vh; /* 70% of the screen's height */
+                max-width: 70vh;  /* 60% of the screen's width */
+                position: absolute;
+                width: auto;
+                height: auto;
+                padding: 3%;
+                border: 3px solid #a19d99; /* Gray border */
+                right: 5vw; /* 10px from the left edge */
+                top: 20vh;
+                
+                justify-content: right;
+                text-justify: right;
+                border-radius: 15px;
+
+                overflow: hidden; /* Hide any overflow from child elements */
+                background-color: #1b181699; /* Set the background color */
+                font-size: 2.7vh;
             }
 
 
@@ -169,14 +208,13 @@
                 top: 3vh;
                 right: 2vw;
                 /*max-height: 90vh; /* 70% of the screen's height */
-                max-width: 40vw;  /* 60% of the screen's width */
+                max-width: 70vw;  /* 60% of the screen's width */
                 /*max-height: 70vh;  /* 60% of the screen's width */
                 border: 3px solid #a19d99;
                 background-color: #1b181699;
                 border-radius: 15px;
                 padding: 3vh;
                 /*box-sizing: border-box;*/
-                font-size: 3.5em; 
                 text-align: right;
             }
 
@@ -188,7 +226,7 @@
             .highlight-text {
                 /*font-family: 'Courier New', Courier, monospace; */
                 font-family: Business;
-                font-size: 2.5vw;
+                font-size: 1vw;
                 /*line-height: 1em; */
                 margin: 0; 
                 cursor: pointer;
@@ -286,10 +324,35 @@
             <a href="./index.html"> <img src="./assets/top_logo.png" alt="logo_with_text" style="width:70vw; margin-left: 1vw; margin-top: 1vh;"> </a>
         </div>
 
-        <div style="display: flex; justify-content: center; width: 100vw; margin-top: 3vh;">
-            <img src="./assets/rotatinggiant.gif" style="height: 40vw; text-align: center;" alt="spinning_logo">
+        <div style="display: flex; justify-content: center; width: 100vw;">
+            <!-- empty div for centering lol -->
         </div>
 
+
+        <div class="text-wrapper">
+            <!-- content below! -->
+            Jonah and Parker Edmundson have been training no-gi Jiu Jitsu since July 2020. 
+            Jonah earned his purple belt in 2023 under Sterling Redlack of RDC Jiu Jitsu, and Parker earned his blue belt in 2022 under Craig Shintani of Kingdom MMA. 
+            The Edmundsons bring a fun, modern approach to the grappling arts, and aim to provide an enjoyable training environment for both hobbyists and competitive athletes. <br>
+            Unique features of Giants Jiu Jitsu include the exclusive focus on no-gi grappling, as well as the weekly wrestling-only and leglock-only classes. 
+            Overall, Giants Jiu Jitsu provides members with a fun, competitive training environment and high level grappling instruction.
+
+
+        </div>
+
+
+        <div style="display: flex; justify-content: center; width: 100vw; margin-top: 5vh;">
+            <!-- mobile image -->
+            <img src="./assets/jonah.jpg" style="width: 80vw; text-align: center;" alt="coach jonah">
+        </div>
+
+        <div style="display: flex; justify-content: center; width: 100vw; margin-top: 5vh;">
+            <!-- mobile image -->
+            <img src="./assets/parker.jpeg" style="width: 80vw; text-align: center;" alt="coach parker">
+        </div>
+
+
+        <!--
         <div class="highlight-box">
             <a href="./about_us.html"><p class="highlight-text word1"><b>About Us</b></p></a> <br>
             <a href="./location.html"></a><p class="highlight-text word2"><b>Location</b></p></a> <br>
@@ -298,6 +361,7 @@
             <a href="./gallery.html"></a><p class="highlight-text word5"><b>Gallery</b></p></a> <br>
             <a href="./contact.html"></a><p class="highlight-text word6"><b>Contact</b></p></a>
         </div>
+    -->
 
     </div>
 
@@ -316,21 +380,29 @@
         </div>
 
         <div class="image-wrapper">
-            <img src="./assets/rotatinggiant.gif" style="align-self: flex-start; width:35vw;" alt="spinning_logo">
+            <img src="./assets/jonahparker.jpg" style="align-self: flex-start; width:35vw;" alt="coach jonah and parker">
         </div>
 
-        <div class="highlight-box">
-            <a href="./about_us.html"><p class="highlight-text word1"><b>About Us</b></p></a> <br>
-            <a href="./location.html"></a><p class="highlight-text word2"><b>Location</b></p></a> <br>
-            <a href="./membership.html"></a><p class="highlight-text word3"><b>Membership</b></p></a> <br> 
-            <a href="./schedule.html"></a><p class="highlight-text word4"><b>Schedule</b></p></a> <br>
-            <a href="./gallery.html"></a><p class="highlight-text word5"><b>Gallery</b></p></a> <br>
+        <div class="highlight-box"> 
+            <a href="./about_us.html"><p class="highlight-text word1"><b>About Us</b></p></a> &nbsp;&nbsp;
+            <a href="./location.html"></a><p class="highlight-text word2"><b>Location</b></p></a> &nbsp;&nbsp;
+            <a href="./membership.html"></a><p class="highlight-text word3"><b>Membership</b></p></a> &nbsp;&nbsp;
+            <a href="./schedule.html"></a><p class="highlight-text word4"><b>Schedule</b></p></a> &nbsp;&nbsp;
+            <a href="./gallery.html"></a><p class="highlight-text word5"><b>Gallery</b></p></a> &nbsp;&nbsp;
             <a href="./contact.html"></a><p class="highlight-text word6"><b>Contact</b></p></a>
         </div>
 
 
+        <div class="text-wrapper">
+            Jonah and Parker Edmundson have been training no-gi Jiu Jitsu since July 2020. 
+            Jonah earned his purple belt in 2023 under Sterling Redlack of RDC Jiu Jitsu, and Parker earned his blue belt in 2022 under Craig Shintani of Kingdom MMA. 
+            The Edmundsons bring a fun, modern approach to the grappling arts, and aim to provide an enjoyable training environment for both hobbyists and competitive athletes. <br>
+            Unique features of Giants Jiu Jitsu include the exclusive focus on no-gi grappling, as well as the weekly wrestling-only and leglock-only classes. 
+            Overall, Giants Jiu Jitsu provides members with a fun, competitive training environment and high level grappling instruction.
+        </div>
+
+
         <div class="bottom-right-text">
-            <a style="vertical-align: middle;">March 1st Opening Day - sign up in the month of March to get a free t-shirt! &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </a>
             <a href="https://www.facebook.com/profile.php?id=100095534624358"><img src="./assets/icons/facebook.webp" alt="facebook" style="height:6vh; vertical-align: middle;"></a> &nbsp;&nbsp;&nbsp;
             <a href="https://www.instagram.com/giantsjiujitsu/"><img src="./assets/icons/instagram.webp" alt="instagram" style="height:6vh; vertical-align: middle;"></a> &nbsp;&nbsp;
             <a href="https://www.youtube.com/@GiantsJiuJitsu"><img src="./assets/icons/youtube.webp" alt="youtube" style="height:8vh; vertical-align: middle;"></a> 
