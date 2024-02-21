@@ -47,7 +47,8 @@
                 position: center;
                 margin: auto;
                 /*max-height: 90vh; /* 70% of the screen's height */
-                max-width: 60vw;  /* 60% of the screen's width */
+                max-width: 90vw;  /* 60% of the screen's width */
+                width: fit-content;
                 /*max-height: 40vh;  /* 60% of the screen's width */
                 border: 3px solid #a19d99;
                 background-color: #1b181699;
@@ -63,8 +64,8 @@
 
             .highlight-box br{
                 display: block; 
-                margin-bottom: -3vh;
-                margin-top: -3vh; 
+                margin-bottom: min(-3vh, -20px);
+                margin-top: min(-3vh, -20px); 
             }
 
             .bottom-right-text2 {
@@ -86,7 +87,7 @@
                 /*font-family: 'Courier New', Courier, monospace; */
                 font-family: Business;
                 font-size: max(3.5vh, 20px);
-                line-height: 5vh;  
+                line-height: max(2vh, 15x);  
                 cursor: pointer;
                 display: inline-block; 
                 transition: color 0.3s, background-color 0.3s;
