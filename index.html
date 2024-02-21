@@ -16,7 +16,7 @@
             background-color: rgba(0, 0, 0, 1);
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: repeat-y;
             height: 100vh; /* Set the height to 100% of the viewport height */
             display: flex;
             font-family: STIX; /* Choose an appropriate font */
@@ -53,6 +53,8 @@
                 background-color: #1b181699;
                 border-radius: 15px;
                 padding: 3vh;
+                padding-top: 1vh;
+                padding-bottom: 1vh;
                 /*box-sizing: border-box;*/
                 font-size: 3.5em; 
                 text-align: center;
@@ -83,65 +85,41 @@
             .highlight-text {
                 /*font-family: 'Courier New', Courier, monospace; */
                 font-family: Business;
-                font-size: 3vh;
+                font-size: max(3.5vh, 20px);
                 line-height: 5vh;  
                 cursor: pointer;
                 display: inline-block; 
                 transition: color 0.3s, background-color 0.3s;
             }
 
-            .highlight-text.word1:hover {
-                color: #000;
-                background-color: #FA208E;
-            }
-
-            .highlight-text.word2:hover {
-                color: #000;
-                background-color: #206DFA;
-            }
-
-            .highlight-text.word3:hover {
-                color: #000;
-                background-color: #a19d99; 
-            }
-
-            .highlight-text.word4:hover {
-                color: #000;
-                background-color: #21FA20;
-            }
-
-            .highlight-text.word5:hover {
-                color: #000;
-                background-color: #FA3F15;
-            }
-
-            .highlight-text.word6:hover {
-                color: #000;
-                background-color: #FAB520; 
-            }
-
-            .word1 {
+            .word1 a {
                 color: #FA208E; /* Default color for Word1 */
+                text-decoration: none;
             }
 
-            .word2 {
+            .word2 a {
                 color: #206DFA; /* Default color for Word2 */
+                text-decoration: none;
             }
 
-            .word3 {
+            .word3 a {
                 color: #a19d99; /* Default color for Word3 */
+                text-decoration: none;
             }
 
-            .word4 {
+            .word4 a {
                 color: #21FA20; /* Default color for Word1 */
+                text-decoration: none;
             }
 
-            .word5 {
+            .word5 a {
                 color: #FA3F15; /* Default color for Word2 */
+                text-decoration: none;
             }
 
-            .word6 {
+            .word6 a {
                 color: #FAB520; /* Default color for Word3 */
+                text-decoration: none;
             }
 
 
@@ -307,12 +285,12 @@
         </div>
 
         <div class="highlight-box">
-            <a href="./about_us.html"><p class="highlight-text word1"><b>About Us</b></p></a> <br>
-            <a href="./location.html"><p class="highlight-text word2"><b>Location</b></p></a> <br>
-            <a href="./membership.html"><p class="highlight-text word3"><b>Membership</b></p></a> <br> 
-            <a href="./schedule.html"><p class="highlight-text word4"><b>Schedule</b></p></a> <br>
-            <a href="./gallery.html"><p class="highlight-text word5"><b>Gallery</b></p></a> <br>
-            <a href="./contact.html"><p class="highlight-text word6"><b>Contact</b></p></a>
+            <p class="highlight-text word1"><a href="./about_us.html"><b>About Us</b></a></p> <br>
+            <p class="highlight-text word2"><a href="./location.html"><b>Location</b></a></p> <br>
+            <p class="highlight-text word3"><a href="./membership.html"><b>Membership</b></a></p> <br> 
+            <p class="highlight-text word4"><a href="./schedule.html"><b>Schedule</b></a></p> <br>
+            <p class="highlight-text word5"><a href="./gallery.html"><b>Gallery</b></a></p> <br>
+            <p class="highlight-text word6"><a href="./contact.html"><b>Contact</b></a></p>
         </div>
 
         <div class="bottom-right-text2">
