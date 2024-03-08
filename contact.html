@@ -55,7 +55,8 @@
                 /*box-sizing: border-box;*/
                 font-size: 20px; 
                 text-align: center;
-                margin-top: 3vh;
+                margin-top: 1vh;
+                margin-bottom: 2vh;
             }
 
 
@@ -182,16 +183,17 @@
 
 
             .text-wrapper {
-                position: absolute;
                 max-height: 60vh; /* 70% of the screen's height */
-                max-width: 70vh;  /* 60% of the screen's width */
+                max-width: 10vw;  /* 60% of the screen's width */
                 position: absolute;
                 width: auto;
                 height: auto;
-                padding: 3%;
+                padding: 0%;
+                padding-left: 3vw;
+                padding-right: 3vw;
                 border: 3px solid #a19d99; /* Gray border */
-                right: 5vw; /* 10px from the left edge */
-                top: 20vh;
+                left: 2vw; /* 10px from the left edge */
+                margin-top: 2vh;
                 
                 justify-content: right;
                 text-justify: right;
@@ -199,7 +201,7 @@
 
                 overflow: hidden; /* Hide any overflow from child elements */
                 background-color: #1b181699; /* Set the background color */
-                font-size: 2.7vh;
+                font-size: 1vw;
             }
 
 
@@ -213,7 +215,7 @@
                 border: 3px solid #a19d99;
                 background-color: #1b181699;
                 border-radius: 15px;
-                padding: 3vh;
+                padding: 2vh;
                 /*box-sizing: border-box;*/
                 text-align: right;
             }
@@ -226,7 +228,7 @@
             .highlight-text {
                 /*font-family: 'Courier New', Courier, monospace; */
                 font-family: Business;
-                font-size: 1vw;
+                font-size: max(1vw, 1px);
                 /*line-height: 1em; */
                 margin: 0; 
                 cursor: pointer;
@@ -326,6 +328,12 @@
             <!-- empty div for centering lol -->
         </div>
 
+        <div class="text-wrapper">
+            <!-- content below! -->
+            <p>
+                Fill out the form below to book your 3 day free trial!  
+            </p> 
+        </div>
 
         <!-- Calendly inline widget begin -->
 <div class="calendly-inline-widget" data-url="https://calendly.com/giantsjiujitsu" style="min-width:320px;height:700px;"></div>

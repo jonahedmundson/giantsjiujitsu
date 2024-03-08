@@ -16,7 +16,7 @@
             background-color: rgba(0, 0, 0, 1);
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            background-repeat: repeat-y;
             height: 100vh; /* Set the height to 100% of the viewport height */
             display: flex;
             font-family: STIX; /* Choose an appropriate font */
@@ -53,7 +53,7 @@
                 border-radius: 15px;
                 padding: 1vw;
                 /*box-sizing: border-box;*/
-                font-size: 1.7vh; 
+                font-size: 20px; 
                 text-align: center;
                 margin-top: 3vh;
             }
@@ -162,36 +162,38 @@
             }
 
             .image-wrapper {
-                max-height: 80vh; /* 70% of the screen's height */
                 max-width: 80vw;  /* 60% of the screen's width */;
                 padding: 1vw 1vw 1vw 1vw;
                 border: 3px solid #a19d99; /* Gray border */
-                margin-top: 5vh;
+                margin-top: 3vh;
                 position: inherit;
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom: 3vh;
                 display: flex; 
                 width: 62vw;
+                height: 65vh;
                 
                 justify-content: center;
                 border-radius: 15px;
 
-                overflow: hidden; /* Hide any overflow from child elements */
+                overflow: scroll; 
                 background-color: #1b181699; /* Set the background color */
             }
 
 
             .text-wrapper {
-                position: absolute;
                 max-height: 60vh; /* 70% of the screen's height */
-                max-width: 70vh;  /* 60% of the screen's width */
-                position: absolute;
-                width: auto;
+                max-width: 70vw;  /* 60% of the screen's width */
+                width: fit-content;
                 height: auto;
-                padding: 3%;
+                padding: 0%;
+                padding-left: 3vw;
+                padding-right: 3vw;
                 border: 3px solid #a19d99; /* Gray border */
-                right: 5vw; /* 10px from the left edge */
-                top: 20vh;
+                left: 2vw; /* 10px from the left edge */
+                margin-top: 2vh;
+                margin-left: 2vw;
                 
                 justify-content: right;
                 text-justify: right;
@@ -199,7 +201,7 @@
 
                 overflow: hidden; /* Hide any overflow from child elements */
                 background-color: #1b181699; /* Set the background color */
-                font-size: 2.7vh;
+                font-size: max(1vw, 2vh);
             }
 
 
@@ -213,7 +215,7 @@
                 border: 3px solid #a19d99;
                 background-color: #1b181699;
                 border-radius: 15px;
-                padding: 3vh;
+                padding: 2vh;
                 /*box-sizing: border-box;*/
                 text-align: right;
             }
@@ -226,7 +228,7 @@
             .highlight-text {
                 /*font-family: 'Courier New', Courier, monospace; */
                 font-family: Business;
-                font-size: 1vw;
+                font-size: max(1vw, 1px);
                 /*line-height: 1em; */
                 margin: 0; 
                 cursor: pointer;
@@ -342,20 +344,27 @@
             <!-- empty div for centering lol -->
         </div>
 
+        <div class="text-wrapper">
+            <!-- content below! -->
+            <p>
+                We are currently undergoing renovations, but will be ready soon! 
+            </p> 
+        </div>
+
 
         <div style="display: flex; justify-content: center; width: 100vw; margin-top: 5vh;">
             <!-- mobile image -->
-            <img src="./assets/placeholder.png" style="width: 80vw; text-align: center;" alt="coach jonah">
+            <img src="./assets/gallery/unnamed.jpg" style="width: 80vw; text-align: center;" alt="coach jonah">
         </div>
 
         <div style="display: flex; justify-content: center; width: 100vw; margin-top: 5vh;">
             <!-- mobile image -->
-            <img src="./assets/placeholder.png" style="width: 80vw; text-align: center;" alt="coach parker">
+            <img src="./assets/gallery/unnamed2.jpg" style="width: 80vw; text-align: center;" alt="coach parker">
         </div>
 
         <div style="display: flex; justify-content: center; width: 100vw; margin-top: 5vh;">
             <!-- mobile image -->
-            <img src="./assets/placeholder.png" style="width: 80vw; text-align: center;" alt="coach jonah">
+            <img src="./assets/gallery/unnamed3.jpg" style="width: 80vw; text-align: center;" alt="coach jonah">
         </div>
 
         <div style="display: flex; justify-content: center; width: 100vw; margin-top: 5vh;">
@@ -402,16 +411,23 @@
             <!-- empty div for centering lol -->
         </div>
 
+        <div class="text-wrapper">
+            <!-- content below! -->
+            <p>
+                We are currently undergoing renovations, but will be ready soon! 
+            </p> 
+        </div>
+
         <div class="image-wrapper">
             <div class="container">
                 <div class="image">
-                <img src="./assets/placeholder.png" style="width: 30vw;" />
+                <img src="./assets/gallery/unnamed.jpg" style="width: 30vw;" />
                 </div>
                 <div class="image">
-                <img src="./assets/placeholder.png" style="width: 30vw;" />
+                <img src="./assets/gallery/unnamed2.jpg" style="width: 30vw;" />
                 </div>
                 <div class="image">
-                <img src="./assets/placeholder.png" style="width: 30vw;" />
+                <img src="./assets/gallery/unnamed3.jpg" style="width: 30vw;" />
                 </div>
                 <div class="image">
                 <img src="./assets/placeholder.png" style="width: 30vw;"/>
