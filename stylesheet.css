@@ -215,6 +215,9 @@ div img {
   }
 
 
+  .mobile {
+    display: none;
+  }
 
 
 
@@ -272,5 +275,14 @@ div img {
 
     .spacer {
         height: 10px !important;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: inline !important;
+        
     }
 }
