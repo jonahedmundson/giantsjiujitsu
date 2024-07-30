@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="No Gi Jiu Jitsu in South Edmonton">
+    <link rel="icon" href="./assets/giant.png" type="image/x-icon">
+    <style>
+        @font-face { font-family: Business; src: url('./assets/font/FFF Business Bold.ttf'); }
+        @font-face { font-family: STIX; src: url('./assets/font/STIXGeneral-Bold.otf'); }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url('./assets/bg3-op20.Jpeg'); /* Replace 'your-background-image.jpg' with the path to your image */
+            background-color: rgba(0, 0, 0, 1);
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat-y;
+            height: 100vh; /* Set the height to 100% of the viewport height */
+            display: flex;
+            font-family: STIX; /* Choose an appropriate font */
+            color: #fff;
+            overflow-y: auto;
+        }
+
+        /* Additional styles for content on top of the background, if needed */
+        .content {
+            text-align: center;
+            /* Add more styles as needed */
+        }
+
+
+        /* For mobile vs desktop */
+        /* Common styles for both desktop and handheld devices */
+
+        /* Styles for handheld devices */
+        @media only screen and (max-width: 819px) {
+            /* Add your mobile styles here */
+
+            .desktop-content {
+                display: none; /* Hide content for desktop on mobile */
+            }
+
+
+            .highlight-box {
+                position: center;
+                margin: auto;
+                /*max-height: 90vh; /* 70% of the screen's height */
+                max-width: 90vw;  /* 60% of the screen's width */
+                width: fit-content;
+                /*max-height: 40vh;  /* 60% of the screen's width */
+                border: 3px solid #a19d99;
+                background-color: #1b181699;
+                border-radius: 15px;
+                padding: 3vh;
+                padding-top: 1vh;
+                padding-bottom: 1vh;
+                /*box-sizing: border-box;*/
+                font-size: 3.5vh; 
+                text-align: center;
+                margin-top: 5vh;
+            }
+
+            .highlight-box br{
+                display: block; 
+                /* margin-bottom: min(-4vh, -20px);
+                margin-top: min(-4vh, -20px);  */
+                line-height: 0%;
+            }
+
+            .bottom-right-text2 {
+                position: center;
+                margin: auto;
+                /*max-height: 90vh; /* 70% of the screen's height */
+                max-width: 80vw;  /* 60% of the screen's width */
+                /*max-height: 40vh;  /* 60% of the screen's width */
+                border-radius: 15px;
+                padding: 3vh;
+                /*box-sizing: border-box;*/
+                font-size: 1em; 
+                text-align: center;
+                margin-top: 1vh;
+                display: block;
+            }
+
+            .highlight-box p {
+                margin: 0px;
+            }
+
+            .highlight-text {
+                /*font-family: 'Courier New', Courier, monospace; */
+                font-family: Business;
+                font-size: max(3.5vh, 20px);
+                line-height: max(2vh, 15x);  
+                cursor: pointer;
+                display: inline-block; 
+            }
+
+            .word1 a {
+                color: #FA208E; /* Default color for Word1 */
+                text-decoration: none;
+            }
+
+            .word2 a {
+                color: #206DFA; /* Default color for Word2 */
+                text-decoration: none;
+            }
+
+            .word3 a {
+                color: #a19d99; /* Default color for Word3 */
+                text-decoration: none;
+            }
+
+            .word4 a {
+                color: #21FA20; /* Default color for Word1 */
+                text-decoration: none;
+            }
+
+            .word5 a {
+                color: #FA3F15; /* Default color for Word2 */
+                text-decoration: none;
+            }
+
+            .word6 a {
+                color: #FAB520; /* Default color for Word3 */
+                text-decoration: none;
+            }
+
+
+        }
+
+
+        /* Styles for desktop */
+        @media only screen and (min-width: 820px) {
+            /* Add your desktop styles here */
+
+            .mobile-content {
+                display: none; /* Hide content for mobile devices on desktop */
+            }
+
+            .desktop-content {
+                display: block; /* Show content for desktop devices */
+            }
+
+            .image-wrapper {
+                max-height: 70vh; /* 70% of the screen's height */
+                max-width: 80vh;  /* 60% of the screen's width */
+                width: auto;
+                height: auto;
+                padding: 6%;
+                border: 3px solid #a19d99; /* Gray border */
+                margin-left: 5vw; /* 10px from the left edge */
+                margin-top: 1vh;
+                display: flex;
+                
+                justify-content: center;
+                width: 100%;
+                border-radius: 15px;
+
+                overflow: hidden; /* Hide any overflow from child elements */
+                background-color: #1b181699; /* Set the background color */
+            }
+
+
+            .highlight-box {
+                position: absolute;
+                top: 3vh;
+                right: 2vw;
+                /*max-height: 90vh; /* 70% of the screen's height */
+                max-width: 40vw;  /* 60% of the screen's width */
+                /*max-height: 70vh;  /* 60% of the screen's width */
+                border: 3px solid #a19d99;
+                background-color: #1b181699;
+                border-radius: 15px;
+                padding: 3vh;
+                /*box-sizing: border-box;*/
+                font-size: max(2.5vw, 35px); 
+                text-align: right;
+            }
+
+            .highlight-box br{
+                display: block; 
+                margin-bottom: 0; 
+            }
+
+            .highlight-box a {
+                overflow: hidden;
+            }
+
+            .highlight-text {
+                /*font-family: 'Courier New', Courier, monospace; */
+                font-family: Business;
+                /* font-size: 5vh; */
+                /*line-height: 1em; */
+                margin: 0; 
+                cursor: pointer;
+                display: inline-block; 
+                transition: color 0.3s, background-color 0.3s;
+            }
+
+            .highlight-text.word1:hover {
+                color: #000;
+                background-color: #FA208E;
+            }
+
+            .highlight-text.word2:hover {
+                color: #000;
+                background-color: #206DFA;
+            }
+
+            .highlight-text.word3:hover {
+                color: #000;
+                background-color: #a19d99; 
+            }
+
+            .highlight-text.word4:hover {
+                color: #000;
+                background-color: #21FA20;
+            }
+
+            .highlight-text.word5:hover {
+                color: #000;
+                background-color: #FA3F15;
+            }
+
+            .highlight-text.word6:hover {
+                color: #000;
+                background-color: #FAB520; 
+            }
+
+            .word1 {
+                color: #FA208E; /* Default color for Word1 */
+            }
+
+            .word2 {
+                color: #206DFA; /* Default color for Word2 */
+            }
+
+            .word3 {
+                color: #a19d99; /* Default color for Word3 */
+            }
+
+            .word4 {
+                color: #21FA20; /* Default color for Word1 */
+            }
+
+            .word5 {
+                color: #FA3F15; /* Default color for Word2 */
+            }
+
+            .word6 {
+                color: #FAB520; /* Default color for Word3 */
+            }
+
+
+        }
+
+        .bottom-right-text {
+                position: absolute;
+                bottom: 4vh;
+                right: 3vw;
+                font-size: 1.3em;
+            }
+
+        
+
+
+
+
+    </style>
+    <title>Giants Jiu Jitsu</title> 
+
+   <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2070297803338073');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2070297803338073&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NRWT8VVF0H">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NRWT8VVF0H');
+</script>
+</head>
+
+
+
+
+
+
+
+<body>
+    
+
+
+    <div class="mobile-content">
+        <!-- Content for handheld devices -->
+        
+        <div>
+            <a href="./index.html"> <img src="./assets/top_logo.png" alt="logo_with_text" style="width:70vw; margin-left: 1vw; margin-top: 1vh;"> </a>
+        </div>
+
+        <div style="display: flex; justify-content: center; width: 100vw; margin-top: 3vh;">
+            <!-- <img src="./assets/rotatinggiant.gif" style="height: 40vw; text-align: center;" alt="spinning_logo"> -->
+            <img src="./assets/group_photo.jpg" style="height: 90vw; text-align: center; border-radius: 12px;"   alt="group photo">        
+        </div>
+
+        <div class="highlight-box">
+            <p class="highlight-text word1"><a href="./about_us.html"><b>About Us</b></a></p> <br>
+            <p class="highlight-text word2"><a href="./location.html"><b>Location</b></a></p> <br>
+            <p class="highlight-text word3"><a href="./membership.html"><b>Membership</b></a></p> <br> 
+            <p class="highlight-text word4"><a href="./schedule.html"><b>Schedule</b></a></p> <br>
+            <p class="highlight-text word5"><a href="./gallery.html"><b>Gallery</b></a></p> <br>
+            <p class="highlight-text word6"><a href="./contact.html"><b>Sign Up</b></a></p>
+        </div>
+
+        <div class="bottom-right-text2">
+            <a>Free open mat for members of other gyms!</a> <br>
+            <a href="https://www.facebook.com/profile.php?id=100095534624358"><img src="./assets/icons/facebook.webp" alt="facebook" style="height:6vh; vertical-align: middle;"></a> &nbsp;&nbsp;&nbsp;
+            <a href="https://www.instagram.com/giantsjiujitsu/"><img src="./assets/icons/instagram.webp" alt="instagram" style="height:6vh; vertical-align: middle;"></a> &nbsp;&nbsp;
+            <a href="https://www.youtube.com/@GiantsJiuJitsu"><img src="./assets/icons/youtube.webp" alt="youtube" style="height:8vh; vertical-align: middle;"></a> 
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="desktop-content">
+        <!-- Content for desktop -->
+        <div>
+            <a href="./index.html"> <img src="./assets/top_logo.png" alt="logo_with_text" style="height:12vh; margin-left: 1vw; margin-top: 1vh;"> </a>
+        </div>
+
+        <div class="image-wrapper">
+            <!-- <img src="./assets/rotatinggiant.gif" style="align-self: flex-start; width:35vw;" alt="spinning_logo"> -->
+            <img src="./assets/group_photo.jpg" style="height: 30vw; text-align: center; border-radius: 12px;" alt="group photo">     
+        </div>
+     
+
+        <div class="highlight-box">
+            <a href="./about_us.html"><p class="highlight-text word1"><b>About Us</b></p></a> <br>
+            <a href="./location.html"><p class="highlight-text word2"><b>Location</b></p></a> <br>
+            <a href="./membership.html"><p class="highlight-text word3"><b>Membership</b></p></a> <br> 
+            <a href="./schedule.html"><p class="highlight-text word4"><b>Schedule</b></p></a> <br>
+            <a href="./gallery.html"><p class="highlight-text word5"><b>Gallery</b></p></a> <br>
+            <a href="./contact.html"><p class="highlight-text word6"><b>Sign Up</b></p></a>
+        </div>
+
+
+        <div class="bottom-right-text">
+            <a style="vertical-align: middle;">Free open mat for members of other gyms! &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </a>
+            <!-- <a style="vertical-align: middle;">Get a free t-shirt and mouthguard when you sign up! &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </a> -->
+            <a href="https://www.facebook.com/profile.php?id=100095534624358"><img src="./assets/icons/facebook.webp" alt="facebook" style="height:6vh; vertical-align: middle;"></a> &nbsp;&nbsp;&nbsp;
+            <a href="https://www.instagram.com/giantsjiujitsu/"><img src="./assets/icons/instagram.webp" alt="instagram" style="height:6vh; vertical-align: middle;"></a> &nbsp;&nbsp;
+            <a href="https://www.youtube.com/@GiantsJiuJitsu"><img src="./assets/icons/youtube.webp" alt="youtube" style="height:8vh; vertical-align: middle;"></a> 
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>
