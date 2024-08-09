@@ -230,7 +230,7 @@ div img {
     } 
 
     .content-inner3 { 
-        margin-right: 0px !important;
+        margin-left: 0px !important;
     }
     
     div div {
@@ -243,21 +243,22 @@ div img {
 
     h1 { 
         font-family: STIX;
-        margin: 0px;
-        margin-left: 10px;
+        margin: auto;
+        /* margin-left: 10px; */
         font-size: 150%;
     }
     
     h2 { 
         font-family: STIX;
-        margin: 0px;
-        margin-left: 10px;
+        margin: auto;
+        /* margin-left: 10px; */
         font-size: 120%;
         margin-bottom: 10px;
     }
 
     div img {
-        width: 90vw !important;
+        max-height: none !important; 
+        width: 70vw !important;
         margin: auto !important; 
         height: auto !important;
     }
