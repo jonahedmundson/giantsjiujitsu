@@ -31,6 +31,24 @@ body {
     background-position: center bottom;
 }
 
+
+.closed {
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+  height: 90vh;
+  width: 90vw;
+  opacity: 0.3;
+  background-color: #860000;
+  border: #860000 1px;
+  transition: opacity 0.3s; 
+}
+
+.closed:hover {
+  opacity: 1.0;
+}
+
+
 h1 { 
     font-family: STIX;
     margin: 0px;
